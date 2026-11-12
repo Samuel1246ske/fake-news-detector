@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TruthGuard AI helps readers assess news claims and find reasons to verify them." />
+  <title>TruthGuard AI — Verify before you share</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="TruthGuard AI home"><span class="brand-icon">✓</span><span>TruthGuard<span class="brand-ai"> AI</span></span></a>
+    <nav><a href="#how">How it works</a><a href="#about">About</a><a class="nav-cta" href="#checker">Check a story <span>↗</span></a></nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> THINK CLEARLY. SHARE RESPONSIBLY.</div>
+      <h1>Pause the scroll.<br><span>Check the story.</span></h1>
+      <p class="hero-copy">A smarter first step toward understanding what you read. Analyse a news claim, review the signals, and know what to verify next.</p>
+      <a class="primary-btn" href="#checker">Verify a story <span>↓</span></a>
+      <div class="hero-note"><span>✦</span> Built to encourage critical thinking, not replace fact-checkers.</div>
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    </section>
+
+    <section class="checker-section" id="checker">
+      <div class="section-heading"><div><div class="eyebrow muted">THE STORY CHECKER</div><h2>What have you heard?</h2></div><span class="step-tag">01 / ANALYSE</span></div>
+      <div class="checker-card">
+        <label for="newsText">Paste a headline, claim, or article excerpt</label>
+        <textarea id="newsText" maxlength="12000" placeholder="Paste the news story here...\n\nFor a more useful assessment, include the full claim and any date or source information you have."></textarea>
+        <div class="input-footer"><span id="charCount">0 / 12,000 characters</span><button id="clearBtn" class="text-btn" type="button">Clear text</button></div>
+        <div class="action-row"><div class="privacy-note"><span>◈</span> Your text is only sent to the analysis service when you click analyse.</div><button id="analyseBtn" class="analyse-btn" type="button">Analyse story <span>→</span></button></div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </div>
+      <div id="result" class="result-card" hidden>
+        <div class="result-top"><div><div class="eyebrow muted">ASSESSMENT</div><h3 id="resultLabel">Needs more verification</h3></div><span id="resultBadge" class="result-badge">UNVERIFIED</span></div>
+        <p id="resultSummary" class="result-summary"></p>
+        <div class="score-wrap"><div class="score-label"><span>Model confidence</span><strong id="confidence">—</strong></div><div class="score-track"><div id="scoreBar"></div></div></div>
+        <div class="caveat">A model confidence score is not the probability that a story is true. Automated text analysis can be wrong, especially with breaking news, satire, or missing context.</div>
+        <h4>What to check next</h4><ul id="checksList"></ul>
+        <button id="newCheck" class="text-btn" type="button">← Check another story</button>
+      </div>
+    </section>
+
+    <section class="how-section" id="how"><div class="eyebrow muted">A BETTER INFORMATION HABIT</div><h2>Three steps to a<br>more informed you.</h2><div class="steps"><article><span>01</span><h3>Paste the claim</h3><p>Share a headline, statement, or short article excerpt you want to investigate.</p></article><article><span>02</span><h3>Review the signals</h3><p>The system analyses language patterns and returns a cautious preliminary assessment.</p></article><article><span>03</span><h3>Verify independently</h3><p>Check original sources, publication dates, evidence, and trusted independent reporting.</p></article></div></section>
+
+    <section class="about-section" id="about"><div class="about-mark">TG.</div><div><div class="eyebrow">OUR PURPOSE</div><h2>Truth matters.<br>Context matters too.</h2><p>TruthGuard AI is an educational prototype designed to support media literacy. It does not determine truth with certainty and should never be the sole basis for sharing or rejecting a claim.</p></div></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-icon">✓</span><span>TruthGuard<span class="brand-ai"> AI</span></span></a><span>Think critically. Verify independently. © <span id="year"></span></span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
