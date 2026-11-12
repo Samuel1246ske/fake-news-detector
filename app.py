@@ -8,7 +8,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR / "model" / "fake_news_pipeline.joblib"
 app = FastAPI(title="TruthGuard AI API", version="1.0.0", description="Educational news-text screening API")
 origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
