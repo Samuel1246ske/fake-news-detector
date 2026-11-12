@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-BACKEND-URL.example.com"; // Replace after deploying the FastAPI backend.
+const API_URL = "https://truthguard-ai-iah9.onrender.com";
 const input = document.getElementById('newsText');
 const count = document.getElementById('charCount');
 const analyse = document.getElementById('analyseBtn');
